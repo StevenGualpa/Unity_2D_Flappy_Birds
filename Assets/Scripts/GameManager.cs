@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    public Player player;
+    private Player player;
     private Spawner spawner;
 
     public Text scoreText;
@@ -62,4 +62,5 @@ public class GameManager : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
     }
+
 }
