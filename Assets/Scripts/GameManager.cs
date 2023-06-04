@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
 
-        Pause();
+        //Pause();
+        Play();
     }
 
     public void Play()
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(true);
 
         Pause();
+        
     }
 
     public void Pause()

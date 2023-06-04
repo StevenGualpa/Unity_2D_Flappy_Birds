@@ -38,9 +38,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
             direccion = Vector3.up * strength;
             SoundSystem.instance.PlayFlap();
+
 
         }
 
@@ -72,10 +74,11 @@ public class Player : MonoBehaviour
         
         if (other.gameObject.CompareTag("Obstaculo")) {
             SoundSystem.instance.PlayHit();
-            //FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<GameManager>().GameOver();
+
         } else if (other.gameObject.CompareTag("Puntaje")) {
             SoundSystem.instance.PlayCoin();
-            //FindObjectOfType<GameManager>().IncreaseScore();
+            FindObjectOfType<GameManager>().IncreaseScore();
         }
         
     }
