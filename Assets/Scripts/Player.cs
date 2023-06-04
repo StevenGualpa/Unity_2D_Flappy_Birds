@@ -43,7 +43,6 @@ public class Player : MonoBehaviour
             direccion = Vector3.up * strength;
             SoundSystem.instance.PlayFlap();
 
-
         }
 
         // Apply gravity and update the position
